@@ -3,7 +3,6 @@ import Draggable from 'react-draggable';
 import { getWidget, DEFAULT_WIDGETS } from './widgets';
 import { TrashIcon } from '../Icons';
 import setPosition from './setPosition';
-import i18n from '../i18n';
 
 /** We need to compare bounds by value, not by object ref **/
 const bounds = elem => {
@@ -365,7 +364,7 @@ export default class Editor extends Component {
               <div className="r6o-footer">
                 <button
                   className="r6o-btn"
-                  onClick={this.onCancel}>{i18n.t('Close')}</button>
+                  onClick={this.onCancel}>Fechar</button>
               </div>
             ) : (
               <div
@@ -373,7 +372,7 @@ export default class Editor extends Component {
                 { hasDelete && (
                   <button
                     className="r6o-btn left delete-annotation"
-                    title={i18n.t('Delete')}
+                    title="Excluir"
                     onClick={this.onDelete}>
                     <TrashIcon width={12} />
                   </button>
@@ -381,11 +380,11 @@ export default class Editor extends Component {
 
                 <button
                   className="r6o-btn outline"
-                  onClick={this.onCancel}>{i18n.t('Cancel')}</button>
+                  onClick={this.onCancel}>Cancelar</button>
 
                 <button
                   className="r6o-btn "
-                  onClick={this.onOk}>{i18n.t('Ok')}</button>
+                  onClick={this.onOk}>Ok</button>
               </div>
             )}
           </div>

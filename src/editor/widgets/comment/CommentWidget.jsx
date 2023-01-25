@@ -1,7 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
 import TextEntryField from './TextEntryField';
-import i18n from '../../../i18n';
 import PurposeSelect, { PURPOSES } from './PurposeSelect';
 
 const validPurposes = PURPOSES.map(p => p.value);
@@ -113,7 +112,7 @@ const CommentWidget = props => {
             focus={props.focus}
             content={draftReply.value}
             editable={true}
-            placeholder={comments.length > 0 ? i18n.t('Add a reply...') : (props.textPlaceHolder || i18n.t('Add a comment...'))}
+            placeholder={comments.length > 0 ? "Adicionar resposta..." : (props.textPlaceHolder || "Adicionar comentário")}
             onChange={onEditReply}
             onSaveAndClose={() => props.onSaveAndClose()}
           />

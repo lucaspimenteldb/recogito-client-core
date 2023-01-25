@@ -130,7 +130,7 @@ export const LocalTimeAgo = props => {
   return (
     <TimeAgo
       datetime={props.timestamp}
-      locale={i18n.locale()} />
+      locale="pt" />
   )
 
 }

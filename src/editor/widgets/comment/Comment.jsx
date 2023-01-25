@@ -4,7 +4,6 @@ import DropdownMenu from './DropdownMenu';
 import TextEntryField from './TextEntryField';
 import PurposeSelect from './PurposeSelect';
 import { ChevronDownIcon } from '../../../Icons';
-import i18n from '../../../i18n';
 
 /** A single comment inside the CommentWidget **/
 const Comment = props => {
@@ -37,7 +36,7 @@ const Comment = props => {
         <span className="r6o-lastmodified-at">
           <TimeAgo 
             datetime={props.env.toClientTime(timestamp)}
-            locale={i18n.locale()} />
+            locale="pt" />
         </span> 
       }
     </div>

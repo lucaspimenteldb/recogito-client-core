@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { CloseIcon } from '../../../Icons';
-import i18n from '../../../i18n';
 
 import Autocomplete from '../Autocomplete';
 
@@ -98,7 +97,7 @@ const TagWidget = props => {
       {!props.readOnly &&
         <Autocomplete
           focus={props.focus}
-          placeholder={props.textPlaceHolder || i18n.t('Add tag...')}
+          placeholder={props.textPlaceHolder || "Adicionar tag"}
           vocabulary={props.vocabulary || []}
           onChange={onDraftChange}
           onSubmit={onSubmit}/>
